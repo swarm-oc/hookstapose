@@ -28,6 +28,7 @@
         "prettier.singleQuote": true,
         "prettier.useTabs": false,
         "prettier.eslintIntegration": true,
-        "prettier.stylelintIntegration": false
+        "prettier.stylelintIntegration": false,
+        "npm.includeDirectories": ["packages/*/"]
     }
 }

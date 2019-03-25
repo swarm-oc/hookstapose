@@ -1,0 +1,36 @@
+{
+  "name": "@react-hooks-utils/use-form-validation",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "MaanuVazquez",
+  "homepage": "https://github.com/swarm-oc/react-hooks-utils#readme",
+  "license": "MIT",
+  "main": "lib/useFormValidation.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swarm-oc/react-hooks-utils.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "prepublishOnly": "npm run build && cp ../../LICENSE ."
+  },
+  "bugs": {
+    "url": "https://github.com/swarm-oc/react-hooks-utils/issues"
+  },
+  "peerDependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
+  },
+  "devDependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
+  }
+}
