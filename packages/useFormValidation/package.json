@@ -8,7 +8,7 @@
   "main": "lib/useFormValidation.js",
   "directories": {
     "lib": "lib",
-    "test": "__tests__"
+    "test": "test"
   },
   "files": [
     "lib"
@@ -19,7 +19,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: run tests from root\" && exit 1",
+    "test": "jest",
     "prepublishOnly": "npm run build && cp ../../LICENSE ."
   },
   "bugs": {
