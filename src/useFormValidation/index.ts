@@ -1,58 +1,7 @@
 // @flow
 import {useReducer} from 'react'
 import { CHANGE_VALUE, VALIDATE_FIELD, RESET_FIELDS } from './actions'
-
-interface IOptions {
-  form?: {
-    onSubmit?: (e: React.SyntheticEvent<HTMLFormElement>) => void | Promise<unknown>,
-  },
-  fields: {
-    [field: string]: {
-      value?: string,
-      rules: ((value: string) => void)[],
-    },
-  },
-}
-
-interface IFormValidationResult {
-  form: {
-    noValidate: true,
-    onSubmit: (e: React.SyntheticEvent<HTMLFormElement>) => void,
-  },
-  fields: InputProps,
-  resetFields: () => void,
-  manuallySetField: (fieldName: string, value: string) => void,
-}
-
-type InputProps = {
-  [field: string]: {
-    input: {
-      onChange: any,
-      value: (e: React.ChangeEvent<HTMLInputElement>) => void,
-    },
-    info: Status,
-  },
-}
-
-type State = {
-  values: {
-    [field: string]: string,
-  },
-  statuses: {
-    [field: string]: Status,
-  },
-}
-
-type Status = {
-  status: 'standard' | 'success' | 'error',
-  message?: string,
-}
-
-type Action = {
-  type: string,
-  field?: string,
-  payload?: any,
-}
+import { State, Action, IFormValidationResult, IOptions, InputProps } from './types'
 
 function resetAllFields(state: State): State {
   return Object.keys(state.values).reduce<State>((acum: State, fieldName: string) => {
@@ -75,7 +24,7 @@ function reducer(state: State, {type, field, payload}: Action): State  {
     case RESET_FIELDS:
       return resetAllFields(state)
     default:
-      throw Error()
+      throw Error('Reducer: Bad action type')
   }
 }
 
@@ -93,16 +42,18 @@ function getInitialState(options: IOptions): State {
 export default function useFormValidation(options: IOptions): IFormValidationResult {
   const [state, dispatch] = useReducer(reducer, getInitialState(options))
 
-  function validateField(field: string, errorCb?: (message: string) => void, successCb?: () => void): void {
+  function validateField(field: string, errorCb?: (message: string) => void): void {
 
     if (!state.values[field]) {
       return dispatch({type: VALIDATE_FIELD, field, payload: {status: 'standard'}})
     }
 
+    const {rules, onSuccess, onError} = options.fields[field]
+
     try {
-      options.fields[field].rules.forEach(rule => rule(state.values[field]))
+      rules.forEach(rule => rule(state.values[field]))
       dispatch({type: VALIDATE_FIELD, field, payload: {status: 'success'}})
-      if (successCb) successCb()
+      if (onSuccess) onSuccess(state.values[field])
     } catch (error) {
       dispatch({
         type: VALIDATE_FIELD,
@@ -113,6 +64,7 @@ export default function useFormValidation(options: IOptions): IFormValidationRes
         }
       })
       if (errorCb) errorCb(error.message)
+      if (onError) onError(error.message)
     }
   }
 
