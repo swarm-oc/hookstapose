@@ -1,6 +1,6 @@
 # react-hooks-utils
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
-[![Codacy]](https://www.codacy.com/app/swarm-oc/react-hooks-utils?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=swarm-oc/react-hooks-utils&amp;utm_campaign=Badge_Grade)(https://api.codacy.com/project/badge/Grade/8e0dc4b3bef2404d84233022a8c39372)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8e0dc4b3bef2404d84233022a8c39372)](https://www.codacy.com/app/swarm-oc/react-hooks-utils?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=swarm-oc/react-hooks-utils&amp;utm_campaign=Badge_Grade)
 
 Useful react hooks for everyone!
 
