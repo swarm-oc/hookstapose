@@ -340,6 +340,50 @@
     "react-hooks/rules-of-hooks": "error",
     "@typescript-eslint/prefer-interface": "off",
     "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/interface-name-prefix": "off"
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "semi": [
+      "error",
+      "never"
+    ],
+    "@typescript-eslint/indent": [
+      "error",
+      2
+    ],
+    "@typescript-eslint/member-delimiter-style": [
+      "error",
+      {
+        "multiline": {
+          "delimiter": "comma",
+          "requireLast": true
+        },
+        "singleline": {
+          "delimiter": "comma",
+          "requireLast": false
+        }
+      }
+    ],
+    "space-before-blocks": 2,
+    "space-before-function-paren": [
+      2,
+      "never"
+    ],
+    "space-in-parens": [
+      2,
+      "never"
+    ],
+    "space-infix-ops": 2,
+    "spaced-comment": 2,
+    "no-irregular-whitespace": 2,
+    "no-spaced-func": 2,
+    "no-trailing-spaces": 2,
+    "no-extra-parens": 0,
+    "no-mixed-spaces-and-tabs": 2,
+    "no-multiple-empty-lines": [
+      2,
+      {
+        "max": 1
+      }
+    ],
   }
 }
