@@ -6,6 +6,18 @@
   "commit": false,
   "contributors": [
     {
+      "login": "MaanuVazquez",
+      "name": "Emmanuel Vazquez",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/12692648?v=4",
+      "profile": "https://github.com/MaanuVazquez",
+      "contributions": [
+        "code",
+        "maintenance",
+        "review",
+        "ideas"
+      ]
+    },
+    {
       "login": "beogip",
       "name": "Juan Ignacio Gipponi",
       "avatar_url": "https://avatars2.githubusercontent.com/u/1965274?v=4",
