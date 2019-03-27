@@ -1,14 +1,13 @@
 {
-  "name": "react-hook-utils",
-  "version": "0.1.1",
-  "description": "",
-  "main": "lib/index.js",
+  "name": "root",
+  "private": true,
   "scripts": {
-    "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "build": "lerna run build",
+    "test:coverage": "jest --coverage",
+    "postinstall": "lerna bootstrap --no-ci",
+    "release": "lerna run tsc && lerna publish"
   },
-  "author": "MaanuVazquez",
-  "license": "MIT",
   "devDependencies": {
     "@types/jest": "^24.0.11",
     "@types/node": "^11.11.6",
@@ -24,53 +23,10 @@
     "eslint-plugin-react-hooks": "^1.6.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.5.0",
+    "lerna": "^3.13.1",
     "prettier": "^1.16.4",
     "react-app-polyfill": "^0.2.2",
     "react-testing-library": "^6.0.2",
     "typescript": "^3.3.4000"
-  },
-  "dependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!src/**/*.d.ts"
-    ],
-    "setupFiles": [
-      "react-app-polyfill/jsdom"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
-      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"
-    ],
-    "testEnvironment": "jsdom",
-    "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
-      "^.+\\.module\\.(css|sass|scss)$"
-    ],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web",
-      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "web.ts",
-      "ts",
-      "web.tsx",
-      "tsx",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node"
-    ]
   }
 }

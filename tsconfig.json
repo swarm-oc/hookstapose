@@ -4,7 +4,7 @@
     "module": "amd",
     "lib": ["dom", "dom.iterable", "esnext"],
     "jsx": "preserve",
-    "outDir": "./lib",
+    "baseUrl": "packages",
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
@@ -12,6 +12,12 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "declaration": true,
-    "diagnostics": true
-  }
+    "diagnostics": true,
+    "noLib": false,
+    "removeComments": true
+  },
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
 }
