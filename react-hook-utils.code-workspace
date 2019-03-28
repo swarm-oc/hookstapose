@@ -1,33 +1,34 @@
 {
-    "folders": [
-        {
-            "path": "."
-        }
-    ],
-    "settings": {
-        "eslint.autoFixOnSave": true,
-        "eslint.validate": [
-            "javascript",
-            "javascriptreact",
-            {"language": "typescript", "autoFix": true},
-            {"language": "typescriptreact", "autoFix": true}
-        ],
-        "workbench.colorCustomizations": {
-            "titleBar.activeBackground": "#00b3e6",
-            "titleBar.inactiveBackground": "#00b3e699",
-            "titleBar.activeForeground": "#15202b",
-            "titleBar.inactiveForeground": "#15202b99"
-        },
-        "editor.formatOnSave": true,
-        "editor.tabSize": 2,
-        "prettier.bracketSpacing": false,
-        "prettier.arrowParens": "avoid",
-        "prettier.jsxBracketSameLine": false,
-        "prettier.printWidth": 120,
-        "prettier.semi": false,
-        "prettier.singleQuote": true,
-        "prettier.useTabs": false,
-        "prettier.eslintIntegration": true,
-        "prettier.stylelintIntegration": false
+  "folders": [
+    {
+      "path": "."
     }
+  ],
+  "settings": {
+    "eslint.autoFixOnSave": true,
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      {"language": "typescript", "autoFix": true},
+      {"language": "typescriptreact", "autoFix": true}
+    ],
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#00b3e6",
+      "titleBar.inactiveBackground": "#00b3e699",
+      "titleBar.activeForeground": "#15202b",
+      "titleBar.inactiveForeground": "#15202b99"
+    },
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "prettier.bracketSpacing": false,
+    "prettier.arrowParens": "avoid",
+    "prettier.jsxBracketSameLine": false,
+    "prettier.printWidth": 120,
+    "prettier.semi": false,
+    "prettier.singleQuote": true,
+    "prettier.useTabs": false,
+    "prettier.eslintIntegration": true,
+    "prettier.stylelintIntegration": false,
+    "npm.includeDirectories": ["packages/*/"]
+  }
 }
