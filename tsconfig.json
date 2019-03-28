@@ -14,7 +14,8 @@
     "declaration": true,
     "diagnostics": true,
     "noLib": false,
-    "removeComments": true
+    "removeComments": true,
+    "allowJs": true
   },
   "exclude": [
     "node_modules",
