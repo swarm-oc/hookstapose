@@ -15,6 +15,7 @@
     "@types/react-dom": "^16.8.3",
     "@typescript-eslint/eslint-plugin": "^1.5.0",
     "@typescript-eslint/parser": "^1.5.0",
+    "cz-conventional-changelog": "^2.1.0",
     "eslint": "^5.15.3",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
@@ -28,5 +29,10 @@
     "react-testing-library": "^6.0.2",
     "ts-jest": "^24.0.0",
     "typescript": "^3.3.4000"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
