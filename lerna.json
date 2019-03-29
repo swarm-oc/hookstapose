@@ -10,7 +10,6 @@
       "conventionalCommits": true
     },
     "bootstrap": {
-      "hoist": ["react", "react-dom"],
       "npmClientArgs": ["--no-package-lock"]
     }
   }
