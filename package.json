@@ -6,7 +6,7 @@
     "build": "lerna run build",
     "test:coverage": "jest --coverage",
     "postinstall": "lerna bootstrap --no-ci",
-    "release": "lerna run tsc && lerna publish"
+    "release": "lerna publish"
   },
   "devDependencies": {
     "@types/jest": "^24.0.11",
