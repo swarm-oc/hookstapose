@@ -4,6 +4,7 @@
   "scripts": {
     "test": "jest",
     "build": "lerna run build",
+    "ci": "npm test -- --ci --maxWorkers=2 --passWithNoTests",
     "test:coverage": "jest --coverage",
     "postinstall": "lerna bootstrap --no-ci",
     "release": "lerna run tsc && lerna publish"

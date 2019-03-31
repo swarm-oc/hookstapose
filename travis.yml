@@ -1,0 +1,36 @@
+# don't build tags, it's redundant
+if: tag IS blank
+
+git:
+  depth: 3
+
+language: node_js
+
+node_js:
+  - '11'
+  - '10'
+  - '8'
+
+os:
+  - linux
+
+env:
+  global:
+    - NO_UPDATE_NOTIFIER=1
+    - NODE_NO_WARNINGS=1
+
+matrix:
+  fast_finish: true
+
+cache: npm
+
+before_install:
+  - if [[ "$(npm -v)" != "$(npm v npm dist-tags.latest)" ]]; then npm i -g npm@latest; fi
+
+install: npm ci
+
+before_script:
+  - npm config set loglevel warn
+
+script:
+  - npm run ci
