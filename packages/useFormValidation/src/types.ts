@@ -7,7 +7,8 @@ export interface IOptions {
       value?: string,
       rules: ((value: string) => void)[],
       onSuccess?: (value: string) => void | Promise<unknown>,
-      onError?: (message: string) =>  void | Promise<unknown>,
+      onError?: (message: string) => void | Promise<unknown>,
+      isRequired?: boolean,
     },
   },
 }
