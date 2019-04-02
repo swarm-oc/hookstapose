@@ -78,11 +78,14 @@ export default function useFormValidation(options: IOptions): IFormValidationRes
     }
   }
 
-  useEffect(() => {
-    if (updatedField.current) {
-      validateField(updatedField.current)
-    }
-  }, [state.values])
+  useEffect(
+    function validateFieldOnChange() {
+      if (updatedField.current) {
+        validateField(updatedField.current)
+      }
+    },
+    [state.values]
+  )
 
   function thereIsAnError(): boolean {
     let thereIsAnError = false

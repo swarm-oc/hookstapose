@@ -34,7 +34,7 @@ describe('useFormValidation', () => {
     }
   }
 
-  afterEach(() => cleanup())
+  afterEach(cleanup)
 
   beforeEach(() => {
     event = {
