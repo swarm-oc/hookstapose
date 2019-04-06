@@ -186,7 +186,7 @@ describe('useFormValidation', () => {
         target: {
           value: 'Mr Roboto'
         }
-      })
+      } as any)
     })
 
     act(() => {
