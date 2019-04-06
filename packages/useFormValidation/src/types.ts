@@ -26,8 +26,8 @@ export interface IFormValidationResult {
 export type InputProps = {
   [field: string]: {
     input: {
-      onChange: any,
-      value: (e: React.ChangeEvent<HTMLInputElement>) => void,
+      onChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
+      value: string,
     },
     info: Status,
   },
