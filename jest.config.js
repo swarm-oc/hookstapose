@@ -1,4 +1,4 @@
-const baseProject = {
+module.exports = {
   collectCoverage: true,
   collectCoverageFrom: ['packages/**/*.{js,jsx,ts,tsx}', '!packages/**/*.d.ts'],
   setupFiles: ['react-app-polyfill/jsdom'],
@@ -15,18 +15,5 @@ const baseProject = {
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy'
   },
   moduleFileExtensions: ['web.js', 'js', 'web.ts', 'ts', 'web.tsx', 'tsx', 'json', 'web.jsx', 'jsx', 'node'],
-  automock: false,
-}
-
-const projects = [
-  {
-    displayName: 'useFormValidation',
-    roots: ['./packages/useFormValidation'],
-    testMatch: ['<rootDir>/packages/useFormValidation/**/*.(spec|test).{js,jsx,ts,tsx}']
-  }
-]
-
-module.exports = {
-  ...baseProject,
-  projects
+  automock: false
 }
