@@ -43,7 +43,7 @@ function getInitialState(options: IOptions): State {
   )
 }
 
-export default function useFormValidation(options: IOptions): IFormValidationResult {
+export function useFormValidation(options: IOptions): IFormValidationResult {
   const [state, dispatch] = useReducer(reducer, getInitialState(options))
   const updatedField: MutableRefObject<string | null> = useRef(null)
 
