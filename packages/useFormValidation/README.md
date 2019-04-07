@@ -52,7 +52,7 @@ const {form, fields, resetFields, manuallySetField} = useFormValidation(options)
 
 ```javascript
 import React from 'react`
-import useFormValidation from '@react-hook-utils/use-form-validation'
+import {useFormValidation} from '@react-hook-utils/use-form-validation'
 
 function shouldContainLowerZ(value) {
     if (value.indexOf('z') !== -1) return

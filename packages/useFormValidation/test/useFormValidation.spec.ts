@@ -1,5 +1,5 @@
 import {act, renderHook, cleanup} from 'react-hooks-testing-library'
-import useFormValidation from '../src/useFormValidation'
+import {useFormValidation} from '../src/useFormValidation'
 
 describe('useFormValidation', () => {
   let formValidation: any
