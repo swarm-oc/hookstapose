@@ -16,7 +16,7 @@ npm install @react-hook-utils/use-form-validation
 ## API
 
 ```javascript
-import useFormValidation from '@react-hook-utils/use-form-validation
+import useFormValidation from '@react-hook-utils/use-form-validation'
 
 const {form, fields, resetFields, manuallySetField} = useFormValidation(options)
 ```
@@ -51,7 +51,7 @@ const {form, fields, resetFields, manuallySetField} = useFormValidation(options)
 ## Usage
 
 ```javascript
-import React from 'react`
+import React from 'react'
 import {useFormValidation} from '@react-hook-utils/use-form-validation'
 
 function shouldContainLowerZ(value) {
