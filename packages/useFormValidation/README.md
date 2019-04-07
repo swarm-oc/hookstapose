@@ -6,7 +6,7 @@ This hook lets you set rules for every input in your form and validate `onChange
 
 Install with yarn:
 ```
-yarn install @react-hook-utils/use-form-validation
+yarn add @react-hook-utils/use-form-validation
 ```
 Install with npm:
 ```
@@ -16,7 +16,7 @@ npm install @react-hook-utils/use-form-validation
 ## API
 
 ```javascript
-import useFormValidation from '@react-hook-utils/use-form-validation'
+import {useFormValidation} from '@react-hook-utils/use-form-validation'
 
 const {form, fields, resetFields, manuallySetField} = useFormValidation(options)
 ```
