@@ -1,10 +1,10 @@
 import {useEffect, useRef} from 'react'
 
-export default function useEvent(
+export function useEvent(
   event: string,
   callback: EventListener,
   options?: boolean | AddEventListenerOptions,
-  element?: HTMLElement
+  element?: HTMLElement | null
 ): void {
   const currentCallback = useRef(callback)
 
@@ -18,7 +18,6 @@ export default function useEvent(
   useEffect(
     function registerEvent() {
       function onEventTrigger(e: Event): void {
-        if (!currentCallback.current) return
         currentCallback.current(e)
       }
 
