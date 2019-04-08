@@ -3,7 +3,7 @@
     "target": "es5",
     "module": "amd",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "jsx": "preserve",
+    "jsx": "react",
     "baseUrl": "packages",
     "strict": true,
     "forceConsistentCasingInFileNames": true,
