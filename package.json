@@ -30,7 +30,7 @@
     "jest": "^24.5.0",
     "lerna": "^3.13.1",
     "prettier": "^1.16.4",
-    "react-app-polyfill": "^0.2.2",
+    "react-app-polyfill": "^1.0.0",
     "ts-jest": "^24.0.0",
     "typescript": "^3.3.4000"
   },
