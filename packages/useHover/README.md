@@ -5,7 +5,7 @@
 ## Usage
 
 ```javascript
-import {useHover} from '@react-hooks-utils/use-hover'
+import {useHover} from '@hookstapose/use-hover'
 
 export default function Foo() {
   const {isHovered, eventBinders} = useHover()
