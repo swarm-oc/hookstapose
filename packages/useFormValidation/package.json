@@ -1,9 +1,9 @@
 {
-  "name": "@react-hooks-utils/use-form-validation",
+  "name": "@hookstapose/use-form-validation",
   "version": "1.0.0",
   "description": "> TODO: description",
   "author": "MaanuVazquez",
-  "homepage": "https://github.com/swarm-oc/react-hooks-utils#readme",
+  "homepage": "https://github.com/swarm-oc/hookstapose#readme",
   "license": "MIT",
   "main": "lib/useFormValidation.js",
   "directories": {
@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/swarm-oc/react-hooks-utils.git"
+    "url": "git+https://github.com/swarm-oc/hookstapose.git"
   },
   "scripts": {
     "build": "tsc",
@@ -26,7 +26,7 @@
     "prepublishOnly": "npm run build && cp ../../LICENSE ."
   },
   "bugs": {
-    "url": "https://github.com/swarm-oc/react-hooks-utils/issues"
+    "url": "https://github.com/swarm-oc/hookstapose/issues"
   },
   "peerDependencies": {
     "react": "^16.8.5",
